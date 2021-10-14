@@ -2,4 +2,7 @@
     <string name="app_name">FragmentBottomNavigation</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="fragment_chats">Fragment Chats</string>
+    <string name="fragment_status">Fragment Status</string>
+    <string name="fragment_calls">Fragment Calls</string>
 </resources>
