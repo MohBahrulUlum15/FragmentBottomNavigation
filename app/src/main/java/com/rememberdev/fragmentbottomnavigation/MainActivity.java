@@ -1,5 +1,4 @@
 package com.rememberdev.fragmentbottomnavigation;
-
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
@@ -9,18 +8,14 @@ import android.view.MenuItem;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
-
 public class MainActivity extends AppCompatActivity {
     BottomNavigationView bottomNavigationView;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        //Menjadikan Fragment Chats menjadi default
+        //menjadikan Fragment Chats menjadi default
         getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new ChatsFragment()).commit();
-
         bottomNavigationView = findViewById(R.id.bottom_navigation);
         bottomNavigationView.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
             @Override
@@ -37,11 +32,8 @@ public class MainActivity extends AppCompatActivity {
                         selectedFragment = new CallsFragment();
                         break;
                 }
-
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, selectedFragment).commit();
-
-                return true;
-            }
+                return true; }
         });
     }
 }
